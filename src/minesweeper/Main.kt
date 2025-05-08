@@ -1,16 +1,24 @@
 package minesweeper
 
+import java.util.Scanner
 import kotlin.random.Random
 
 fun main() {
-    // Get 10 mines
+    // Initialize Java Scanner
+    val scanner = Scanner(System.`in`)
+
+    // Get the amount of mines
+    print("How many mines do you want on the field? ")
+    val count = scanner.nextInt()
+
+    // Get the mines
     val mines = mutableSetOf<Int>()
     do {
         val position = Random.nextInt(0, 81)
         mines.add(position)
-    } while (mines.count() < 10)
+    } while (mines.count() < count)
 
-    // Print field 9x9
+    // Print field 9×9
     repeat(81) { index ->
         val cell:Char = if (mines.contains(index)) 'X' else '.'
         print(cell)
@@ -18,4 +26,7 @@ fun main() {
             println()
         }
     }
+
+    // Free resources
+    scanner.close()
 }
