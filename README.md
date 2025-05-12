@@ -3,6 +3,8 @@
 This project will teach you how to work with lists in Kotlin.
 You will be dealing with algorithms for generating the minefield and processing the player moves.
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Marqitos/example-kotlin-minesweeper)
+
 ## About
 
 They say a minesweeper makes only two mistakes in their life: the first is their choice of occupation, and the second one is fatal.
